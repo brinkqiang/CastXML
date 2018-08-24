@@ -19,7 +19,7 @@
 rm -rf build
 mkdir build
 pushd build
-cmake -DCMAKE_BUILD_TYPE=relwithdebinfo ..
+cmake -DLLVM_DIR=/usr/lib64/llvm5.0/lib/cmake/llvm -DCMAKE_BUILD_TYPE=relwithdebinfo ..
 make -j1
 popd
 # popd
