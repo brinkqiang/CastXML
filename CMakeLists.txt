@@ -21,7 +21,8 @@ include(src/Version.cmake)
 include(CTest)
 
 if(NOT WIN32)
-  set(LLVM_CMAKE_DIR "/usr/lib64/llvm5.0/lib/cmake/llvm")
+  include(/usr/lib64/llvm5.0/lib/cmake/llvm/AddLLVM.cmake)
+  include(/usr/lib64/llvm5.0/lib/cmake/llvm/AddLLVMDefinitions.cmake)
 endif()
 
 # Build tree locations.
