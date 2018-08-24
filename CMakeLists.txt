@@ -20,6 +20,10 @@ include(src/Version.cmake)
 
 include(CTest)
 
+if(NOT WIN32)
+  set(LLVM_CMAKE_DIR "/usr/lib64/llvm5.0/lib/cmake/llvm")
+endif()
+
 # Build tree locations.
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CastXML_BINARY_DIR}/bin")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CastXML_BINARY_DIR}/lib")
